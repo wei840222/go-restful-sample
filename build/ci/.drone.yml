@@ -1,0 +1,12 @@
+kind: pipeline
+name: default
+
+steps:
+- name: test
+  image: golang:1.15-buster
+  commands:
+  - go test -v -cover -coverprofile=cover.out ./...
+
+trigger:
+  branch:
+  - master

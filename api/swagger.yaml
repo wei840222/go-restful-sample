@@ -1,0 +1,41 @@
+definitions:
+  handler.userCreateReq:
+    properties:
+      name:
+        type: string
+    required:
+    - name
+    type: object
+info:
+  contact:
+    email: wei840222@gmail.com
+    name: API Support
+  description: This is a Sample API.
+  title: Sample API
+  version: "0.1"
+paths:
+  /api/users:
+    post:
+      consumes:
+      - application/json
+      description: create user by accessToken
+      parameters:
+      - description: user data
+        in: body
+        name: Body
+        required: true
+        schema:
+          $ref: '#/definitions/handler.userCreateReq'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: success
+        "400":
+          description: invalid request body format
+      summary: createUser
+      tags:
+      - user
+swagger: "2.0"
+tags:
+- name: user

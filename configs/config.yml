@@ -1,0 +1,5 @@
+mysql:
+  host: localhost:3306
+  username: root
+  password: root1234
+  database: sample

@@ -1,0 +1,10 @@
+build_pkg: ./cmd/main.go
+prev_build_cmds:
+- go generate ./...
+- go test ./...
+excluded_paths:
+- ./api
+- ./internal/store/mock
+envs:
+- DEBUG=true
+- SWAGGER_BASE_URL=http://localhost:8080
