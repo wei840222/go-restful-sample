@@ -6,19 +6,14 @@
 ### Install tools
 ```bash
 # mockgen
-go get -u github.com/golang/mock/mockgen
+go install go.uber.org/mock/mockgen@latest
 
 # swaggo
-go get -u github.com/swaggo/swag/cmd/swag
+go install github.com/swaggo/swag/cmd/swag@latest
 
 # auto watch file change and hot reload server
-go get -u github.com/silenceper/gowatch
+go install github.com/silenceper/gowatch@latest
 
-# generate orm struct go code from connect to mysql
-go get -u github.com/Shelnutt2/db2struct/cmd/db2struct
-
-# setup git hooks and it will auto run go generate ./... && go test ./... on git commit
-git config core.hooksPath githooks
 ```
 ### Commands
 ```bash
@@ -31,11 +26,6 @@ go test ./...
 # run server, config in gowatch.yml
 gowatch
 
-# generate orm struct from mysql
-db2struct --host=localhost --mysql_port=3306 --user=root --password=root1234 --gorm -d sample -t users
-
-# build docker images
-docker build -f build/dockerfile/Dockerfile .
 ```
 
 ## How to run manually
