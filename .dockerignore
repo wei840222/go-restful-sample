@@ -24,3 +24,11 @@ go.work.sum
 
 # env file
 .env
+
+.gitignore
+.dockerignore
+.github
+gowatch.yml
+Dockerfile
+LICENSE
+README.md

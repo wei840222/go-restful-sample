@@ -1,4 +1,0 @@
-log:
-  level: info
-  format: json
-  color: true

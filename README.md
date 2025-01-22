@@ -1,7 +1,5 @@
 # go-restful-sample
 
-[![Build Status](https://cloud.drone.io/api/badges/wei840222/go-restful-sample/status.svg)](https://cloud.drone.io/wei840222/go-restful-sample)
-
 ## How to develop
 ### Install tools
 ```bash
@@ -25,15 +23,4 @@ go test ./...
 
 # run server, config in gowatch.yml
 gowatch
-
-```
-
-## How to run manually
-1. Needs all environment variables below
-
-## Environment Variables
-### Server
-```bash
-export DEBUG=true # enable all verborse log
-export SWAGGER_BASE_URL=http://localhost:8080 # api base url on swagger ui
 ```
