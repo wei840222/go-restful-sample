@@ -14,6 +14,7 @@ type Todo struct {
 	Completed   *bool `gorm:"default:false"`
 }
 
+//go:generate mockgen -destination=mock/todo.go -package=mock . TodoStorage
 type TodoStorage interface {
 	Get(ctx context.Context, id int) (Todo, error)
 	List(ctx context.Context) ([]Todo, error)

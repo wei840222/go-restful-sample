@@ -187,8 +187,8 @@ func RegisterTodoHandler(e *gin.Engine, s storage.TodoStorage) error {
 
 	todo := e.Group("/todos")
 	{
-		todo.GET("/", h.List)
-		todo.POST("/", h.Create)
+		todo.GET("", h.List)
+		todo.POST("", h.Create)
 		todo.GET("/:id", h.Get)
 		todo.PATCH("/:id", h.Update)
 		todo.DELETE("/:id", h.Delete)
